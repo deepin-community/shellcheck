@@ -1,0 +1,227 @@
+shellcheck (0.8.0-2) unstable; urgency=medium
+
+  * Source-only upload because dht likes to upload binaries :(
+
+ -- Samuel Henrique <samueloph@debian.org>  Sun, 14 Nov 2021 20:51:13 +0000
+
+shellcheck (0.8.0-1) unstable; urgency=medium
+
+  * New upstream release
+  * Bump Standards-Version to 4.6.0
+  * d/docs: Install CHANGELOG.md (closes: #992212)
+  * d/rules: Set DEB_CABAL_PACKAGE to ShellCheck
+
+ -- Samuel Henrique <samueloph@debian.org>  Fri, 12 Nov 2021 01:02:02 +0000
+
+shellcheck (0.7.2-2) unstable; urgency=medium
+
+  * d/rules: Fix manpage generation (closes: #918555, #985003)
+
+ -- Samuel Henrique <samueloph@debian.org>  Sun, 15 Aug 2021 18:12:05 +0100
+
+shellcheck (0.7.2-1) unstable; urgency=medium
+
+  * New upstream release
+  * Bump Standards-Version to 4.5.1
+  * Bump d/watch to v4
+
+ -- Samuel Henrique <samueloph@debian.org>  Sat, 14 Aug 2021 17:33:52 +0100
+
+shellcheck (0.7.1-1) unstable; urgency=medium
+
+  * New upstream release
+
+ -- Samuel Henrique <samueloph@debian.org>  Thu, 09 Apr 2020 23:54:08 +0100
+
+shellcheck (0.7.0-2) unstable; urgency=medium
+
+  * Sourceful upload after mistakenly uploading amd64
+
+ -- Samuel Henrique <samueloph@debian.org>  Tue, 19 Nov 2019 21:03:18 +0000
+
+shellcheck (0.7.0-1) unstable; urgency=medium
+
+  * New upstream release
+  * Bump to Standards-Version 4.4.1
+  * Add myself as an uploaded
+  * Remove unused lintian override
+
+ -- Samuel Henrique <samueloph@debian.org>  Tue, 19 Nov 2019 20:18:55 +0000
+
+shellcheck (0.6.0-1) unstable; urgency=medium
+
+  * New upstream release
+
+ -- Clint Adams <clint@debian.org>  Sat, 27 Jul 2019 21:13:01 -0400
+
+shellcheck (0.5.0-3) unstable; urgency=medium
+
+  * Remove build dependency on libghc-parsec3-dev (provided by ghc-
+    8.4.3)
+
+ -- Ilias Tsitsimpis <iliastsi@debian.org>  Wed, 03 Oct 2018 12:06:16 +0300
+
+shellcheck (0.5.0-2) unstable; urgency=medium
+
+  * Remove build dependency on libghc-mtl-dev (provided by ghc-8.4.3)
+
+ -- Ilias Tsitsimpis <iliastsi@debian.org>  Mon, 01 Oct 2018 13:33:39 +0300
+
+shellcheck (0.5.0-1) unstable; urgency=medium
+
+  [ Clint Adams ]
+  * Set Rules-Requires-Root to no.
+
+  [ Ilias Tsitsimpis ]
+  * Bump debhelper compat level to 10
+  * New upstream release
+
+ -- Ilias Tsitsimpis <iliastsi@debian.org>  Sun, 30 Sep 2018 13:37:18 +0300
+
+shellcheck (0.4.7-1) unstable; urgency=medium
+
+  [ Ilias Tsitsimpis ]
+  * Change Priority to optional. Since Debian Policy version 4.0.1,
+    priority extra has been deprecated.
+  * Use the HTTPS form of the copyright-format URL
+  * Modify d/watch and Source field in d/copyright to use HTTPS
+  * Declare compliance with Debian policy 4.1.1
+  * Use salsa.debian.org URLs in Vcs-{Browser,Git} fields
+
+  [ Clint Adams ]
+  * Bump to Standards-Version 4.1.4.
+  * New upstream release
+
+ -- Clint Adams <clint@debian.org>  Mon, 09 Apr 2018 17:43:23 -0400
+
+shellcheck (0.4.6-1) unstable; urgency=medium
+
+  * New upstream release
+
+ -- Clint Adams <clint@debian.org>  Thu, 06 Jul 2017 22:13:17 -0400
+
+shellcheck (0.4.4-4) unstable; urgency=medium
+
+  * Upload to unstable as part of GHC 8 transition.
+
+ -- Clint Adams <clint@debian.org>  Thu, 27 Oct 2016 18:37:22 -0400
+
+shellcheck (0.4.4-3) experimental; urgency=medium
+
+  * Temporarily build with ghc 8.
+
+ -- Clint Adams <clint@debian.org>  Wed, 19 Oct 2016 04:35:01 -0400
+
+shellcheck (0.4.4-2) unstable; urgency=medium
+
+  * "Fix" FTBFS on mips{,el}: Cargo cult the ggc-min-expand stuff.
+
+ -- Helmut Grohne <helmut@subdivi.de>  Mon, 15 Aug 2016 19:30:08 +0200
+
+shellcheck (0.4.4-1) unstable; urgency=medium
+
+  [ Dmitry Bogatov ]
+  * Use secure (https) uri in Vcs-Git field in 'debian/control'
+  * Bump standards version to 3.9.8 (no changes needed)
+
+  [ Helmut Grohne ]
+  * New upstream release 0.4.4. (Closes: #799110, #805647, #815064)
+    + Also addresses some instances of #753709.
+    + License switched from AGPL-3 to GPL-3.
+  * Update Build-Depends from ShellCheck.cabal.
+  * Update make_testsuite_optional.patch.
+
+ -- Helmut Grohne <helmut@subdivi.de>  Sun, 14 Aug 2016 07:10:49 +0200
+
+shellcheck (0.3.7-5) unstable; urgency=medium
+
+  * Switch Vcs-Git/Vcs-Browser headers to new location.
+
+ -- Clint Adams <clint@debian.org>  Thu, 03 Dec 2015 14:55:22 -0500
+
+shellcheck (0.3.7-4) experimental; urgency=medium
+
+  * Disable the test suite on architectures without a threaded runtime, due to
+    https://github.com/haskell/cabal/issues/2398
+
+ -- Joachim Breitner <nomeata@debian.org>  Sat, 22 Aug 2015 09:24:27 +0200
+
+shellcheck (0.3.7-3) experimental; urgency=medium
+
+  * Add lintian override for spurious rpaths
+
+ -- Joachim Breitner <nomeata@debian.org>  Fri, 21 Aug 2015 09:14:00 +0200
+
+shellcheck (0.3.7-2) experimental; urgency=medium
+
+  [ Helmut Grohne ]
+  * Mark shellcheck as Multi-Arch:foreign.
+
+  [ Joachim Breitner ]
+  * Bump standards-version to 3.9.6
+  * Depend on haskell-devscripts >= 0.10 to ensure that this package
+    builds against GHC in experimental
+
+ -- Joachim Breitner <nomeata@debian.org>  Thu, 20 Aug 2015 10:29:14 +0200
+
+shellcheck (0.3.7-1) unstable; urgency=medium
+
+  * New upstream release.
+    + Update make_testsuite_optional.patch.
+    + Update Build-Depends regex-compat -> regex-tdfa.
+  * Use upstream manual page.
+  * Rebuild upstream manual page during build.
+
+ -- Helmut Grohne <helmut@subdivi.de>  Thu, 30 Apr 2015 21:59:35 +0200
+
+shellcheck (0.3.5-3) unstable; urgency=medium
+
+  * Upload to unstable
+
+ -- Joachim Breitner <nomeata@debian.org>  Mon, 27 Apr 2015 11:56:02 +0200
+
+shellcheck (0.3.5-2) experimental; urgency=medium
+
+  * Depend on haskell-devscripts 0.9, found in experimental
+
+ -- Joachim Breitner <nomeata@debian.org>  Wed, 31 Dec 2014 00:23:38 +0100
+
+shellcheck (0.3.5-1) experimental; urgency=medium
+
+  * New Upstream release.
+    + Recognizes $$ in ((...)). (Closes: #754990)
+  * Refresh make_testsuite_optional.patch.
+
+ -- Helmut Grohne <helmut@subdivi.de>  Tue, 30 Dec 2014 22:07:55 +0100
+
+shellcheck (0.3.4-3) unstable; urgency=low
+
+  * Conditionally remove TemplateHaskell code on architectures that do not
+    have ghci to really fix FTBFS.
+
+ -- Helmut Grohne <helmut@subdivi.de>  Thu, 23 Oct 2014 22:34:37 +0200
+
+shellcheck (0.3.4-2) unstable; urgency=medium
+
+  * Only enable test suite on supported architectures. Fixes FTBFS.
+
+ -- Helmut Grohne <helmut@subdivi.de>  Tue, 21 Oct 2014 19:15:36 +0200
+
+shellcheck (0.3.4-1) unstable; urgency=low
+
+  [ Jakub Wilk ]
+  * Remove boldness from sections in manual page.
+
+  [ Helmut Grohne ]
+  * Declare compliance with policy 3.9.6.
+  * New upstream release.
+    + Recognizes xargs --null. (Closes: #753702)
+  * Enable QuickCheck2 based test suite.
+
+ -- Helmut Grohne <helmut@subdivi.de>  Mon, 20 Oct 2014 22:08:28 +0200
+
+shellcheck (0.3.3-1) unstable; urgency=low
+
+  * Initial release (Closes: 751199)
+
+ -- Joachim Breitner <nomeata@debian.org>  Tue, 24 Jun 2014 10:09:35 -0700

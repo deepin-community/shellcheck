@@ -1,0 +1,40 @@
+Source: shellcheck
+Maintainer: Debian Haskell Group <pkg-haskell-maintainers@lists.alioth.debian.org>
+Uploaders: Helmut Grohne <helmut@subdivi.de>,
+           Samuel Henrique <samueloph@debian.org>
+Priority: optional
+Section: devel
+Rules-Requires-Root: no
+Build-Depends: debhelper (>= 10),
+ cdbs,
+ haskell-devscripts (>= 0.13),
+ ghc (>= 8.4.3),
+ ghc-prof,
+ libghc-diff-dev (>= 0.2.0),
+ libghc-diff-prof,
+ libghc-quickcheck2-dev (>= 2.7.4),
+ libghc-aeson-dev,
+ libghc-regex-tdfa-dev,
+ libghc-regex-tdfa-prof,
+ pandoc,
+Standards-Version: 4.6.0
+Homepage: https://www.shellcheck.net/
+Vcs-Browser: https://salsa.debian.org/haskell-team/DHG_packages/tree/master/p/shellcheck
+Vcs-Git: https://salsa.debian.org/haskell-team/DHG_packages.git [p/shellcheck]
+
+Package: shellcheck
+Architecture: any
+Multi-Arch: foreign
+Depends: ${shlibs:Depends},
+ ${misc:Depends},
+Description: lint tool for shell scripts
+ The goals of ShellCheck are:
+ .
+  * To point out and clarify typical beginner's syntax issues,
+    that causes a shell to give cryptic error messages.
+ .
+  * To point out and clarify typical intermediate level semantic problems,
+    that causes a shell to behave strangely and counter-intuitively.
+ .
+  * To point out subtle caveats, corner cases and pitfalls, that may cause an
+    advanced user's otherwise working script to fail under future circumstances.
