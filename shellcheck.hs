@@ -34,6 +34,8 @@ import qualified ShellCheck.Formatter.Quiet
 
 import           Control.Exception
 import           Control.Monad
+import           Control.Monad.IO.Class
+import           Control.Monad.Trans.Class
 import           Control.Monad.Except
 import           Data.Bits
 import           Data.Char
@@ -225,7 +227,7 @@ runFormatter sys format options files = do
     f :: Status -> FilePath -> IO Status
     f status file = do
         newStatus <- process file `catch` handler file
-        return $ status `mappend` newStatus
+        return $! status `mappend` newStatus
     handler :: FilePath -> IOException -> IO Status
     handler file e = reportFailure file (show e)
     reportFailure file str = do
